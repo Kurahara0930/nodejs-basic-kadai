@@ -41,7 +41,7 @@ app.get('/todos', async (req, res) => {
 })
 
 // ToDoデータ情報の更新
-app.post('/todos/:id', async (req, res) => {
+app.put('/todos/:id', async (req, res) => {
     const { title, priority, status } = req.body;
     try {
         const result = await executeQuery(
